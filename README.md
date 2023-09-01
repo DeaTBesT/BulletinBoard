@@ -1,6 +1,6 @@
 ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/DeaTBesT/BulletinBoard)
 ![Static Badge](https://img.shields.io/badge/.NET-6.0-orange)
-![Static Badge](https://img.shields.io/badge/licence-GNUv3.0-red)
+![Static Badge](https://img.shields.io/badge/licence-MIT-red)
 # 📄BulletinBoard
 Project for courses in [SolarLab](https://solarlab.ru/en/index.html).
 # 🚀Installation
