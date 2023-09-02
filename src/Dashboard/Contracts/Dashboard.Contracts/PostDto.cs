@@ -1,4 +1,5 @@
-﻿using Dashboard.Contracts.Base;
+﻿using Dashboard.Contracts.Attachment;
+using Dashboard.Contracts.Base;
 
 namespace Dashboard.Contracts
 {
@@ -26,6 +27,11 @@ namespace Dashboard.Contracts
         /// Наименование тегов.
         /// </summary>
         public string[] TagNames { get; set; }
+
+        /// <summary>
+        /// Изображения.
+        /// </summary>
+        public IReadOnlyCollection<AttachmentDto> Attachments { get; set; }
 
         /// <summary>
         /// Цена.
