@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -7,10 +7,29 @@
     <UserSecretsId>f9e05589-f2b8-47b9-8b62-32a0eafaf000</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..\..</DockerfileContext>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Dashboard.Hosts.Api.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Dashboard.Hosts.Api.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Dashboard.Hosts.Api.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\Dashboard.Application.AppServices\Dashboard.Application.AppServices.csproj" />
+    <ProjectReference Include="..\..\Contracts\Dashboard.Contracts\Dashboard.Contracts.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Dashboard.Infrastructure.DataAccess\Dashboard.Infrastructure.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
